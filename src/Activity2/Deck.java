@@ -35,6 +35,13 @@ public class Deck {
      * @param values is an array containing all of the card point values.
      */
     public Deck(String[] ranks, String[] suits, int[] values) {
+        for(int r=0; r<ranks.length; r++){
+            for(int s=0; s<suits.length; s++){
+                for(int v=0; v<values.length; v++){
+                    this.cards.add(new Card(ranks[r],suits[s],values[v]));
+                }
+            }
+        }
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
     }
 
@@ -44,6 +51,7 @@ public class Deck {
      * @return true if this deck is empty, false otherwise.
      */
     public boolean isEmpty() {
+        return (cards.size()==0);
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
     }
 
@@ -52,6 +60,7 @@ public class Deck {
      * @return the number of undealt cards in this deck.
      */
     public int size() {
+        return cards.size();
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
     }
 
