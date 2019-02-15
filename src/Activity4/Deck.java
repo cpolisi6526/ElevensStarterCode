@@ -64,7 +64,18 @@ public class Deck {
      * and reset the size to represent the entire deck.
      */
     public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+        List<Card> shuffled = new ArrayList<Card>();
+        int x = 0;
+        for (int a = 0; a < ((cards.size() + 1) / 2); a++) {
+            shuffled.add(cards.get(x));
+            x = x + 2;
+        }
+        x = 1;
+        for (int a = 0; a > ((cards.size() + 1) / 2); a++) {
+            shuffled.add(cards.get(x));
+            x = x + 2;
+        }
+        cards = shuffled;
     }
 
     /**
