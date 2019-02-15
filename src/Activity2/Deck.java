@@ -78,6 +78,8 @@ public class Deck {
      *         previously dealt.
      */
     public Card deal() {
+        size--;
+        return cards.get(size);
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
     }
 
