@@ -1,5 +1,8 @@
 package Activity7;
 
+import Activity2.Card;
+import Activity2.Deck;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -184,8 +187,24 @@ public class ElevensBoard {
      * @param selectedCards the list of the indices of the selected cards.
      * @return true if the selected cards form a valid group for removal;
      *         false otherwise.
+     *
+     *       public List<Integer> cardIndexes() {
+     *         List<Integer> selected = new ArrayList<Integer>();
+     *         for (int k = 0; k < cards.length; k++) {
+     *             if (cards[k] != null) {
+     *                 selected.add(new Integer(k));
+     *             }
+     *         }
+     *         return selected;
+     *     }
      */
     public boolean isLegal(List<Integer> selectedCards) {
+        if(selectedCards.get(0)+ selectedCards.get(1)==11){
+            return true;
+        }
+      //  if(selectedCards.get(0)+selectedCards.get(1)+selectedCards.get(2)==0){
+     //       if(selectedCards.get(0).getRank()=="king")
+        }
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
     }
 
