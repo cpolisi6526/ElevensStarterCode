@@ -55,6 +55,21 @@ public class ElevensBoard extends Board {
      */
     @Override
     public boolean isLegal(List<Integer> selectedCards) {
+            int x=0;
+        for (int xx=0; x<selectedCards.size();xx++){
+            x+=selectedCards.get(xx);
+        }
+        if(x==11){
+            return true;
+        }
+        else{
+           if(x==0){
+               return true;
+           }
+           else{
+               return false;
+           }
+        }
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
     }
 
@@ -68,6 +83,7 @@ public class ElevensBoard extends Board {
      */
     @Override
     public boolean anotherPlayIsPossible() {
+
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
     }
 
@@ -80,6 +96,7 @@ public class ElevensBoard extends Board {
      *              contain an 11-pair; false otherwise.
      */
     private boolean containsPairSum11(List<Integer> selectedCards) {
+
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
     }
 
@@ -92,6 +109,7 @@ public class ElevensBoard extends Board {
      *              include a jack, a queen, and a king; false otherwise.
      */
     private boolean containsJQK(List<Integer> selectedCards) {
+
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
     }
 }
